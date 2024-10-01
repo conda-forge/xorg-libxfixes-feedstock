@@ -1,8 +1,8 @@
 {% set xorg_name = "libXfixes" %}
 {% set xorg_category = "lib" %}
 {% set name = "xorg-" ~ xorg_name %}
-{% set version = "6.0.0" %}
-{% set sha256 = "a7c1a24da53e0b46cac5aea79094b4b2257321c621b258729bc3139149245b4c" %}
+{% set version = "6.0.1" %}
+{% set sha256 = "b695f93cd2499421ab02d22744458e650ccc88c1d4c8130d60200213abc02d58" %}
 {% set am_version = "1.15" %} # keep synchronized with build.sh
 
 package:
@@ -10,12 +10,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.bz2
-  url: https://www.x.org/releases/individual/{{ xorg_category }}/{{ xorg_name }}-{{ version }}.tar.bz2
+  url: https://www.x.org/releases/individual/{{ xorg_category }}/{{ xorg_name }}-{{ version }}.tar.xz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage(name|lower) }}
