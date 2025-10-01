@@ -1,8 +1,8 @@
 {% set xorg_name = "libXfixes" %}
 {% set xorg_category = "lib" %}
 {% set name = "xorg-" ~ xorg_name %}
-{% set version = "6.0.1" %}
-{% set sha256 = "b695f93cd2499421ab02d22744458e650ccc88c1d4c8130d60200213abc02d58" %}
+{% set version = "6.0.2" %}
+{% set sha256 = "39f115d72d9c5f8111e4684164d3d68cc1fd21f9b27ff2401b08fddfc0f409ba" %}
 {% set am_version = "1.16" %} # keep synchronized with build.sh
 
 package:
